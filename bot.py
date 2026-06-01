@@ -40,12 +40,10 @@ app = Application.builder().token(BOT_TOKEN).build()
 app.add_handler(CommandHandler("start", start))
 app.add_handler(CallbackQueryHandler(chk, pattern="chk"))
 app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, msg))
-print("Bot ishga tushdi!")
-app = Application.builder().token(BOT_TOKEN)build()
 
-app.add_handler(CommandHandler("start", start))
-app.add_handler(CallbackQueryHandler(chk, pattern="chk"))
-app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, xabar))
+print("Bot ishga tushdi!")
+app.run_polling()
+
 
 print("Bot ishga tushdi!")
 app.run_polling()
